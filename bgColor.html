@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="canvas">
+      <h2>Color schema switcher</h2>
+      <span class="button" id="grey"> yellow</span>
+      <span class="button" id="white">white</span>
+      <span class="button" id="blue">blue</span>
+      <span class="button" id="yellow">yellow</span>
+    </div>
+  </body>
+
+  <script>
+    const buttons = document.querySelectorAll(".button");
+    const body = document.querySelector("body");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", function () {
+        console.log(this.id);
+        body.style.backgroundColor = this.id;
+      });
+    });
+  </script>
+</html>

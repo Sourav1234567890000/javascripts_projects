@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center">BMI CALCULATOR</h1>
+
+      <h3 style="text-align: center">
+        To calculate your BMI please fill the input fields
+      </h3>
+
+      <form id="bmi-form" style="text-align: center; margin-top: 20px">
+        <input
+          type="text"
+          id="weight"
+          placeholder="Weight (kg)"
+          style="
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          "
+        />
+
+        <br />
+
+        <input
+          type="text"
+          id="height"
+          placeholder="Height (cm)"
+          style="
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          "
+        />
+
+        <br />
+
+        <button
+          type="submit"
+          style="
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          "
+        >
+          Calculate BMI
+        </button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </body>
+
+  <script>
+    const form = document.querySelector("#bmi-form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const weight = parseFloat(document.querySelector("#weight").value);
+      const height = parseFloat(document.querySelector("#height").value);
+      const resultBox = document.querySelector("#result");
+
+      const bmi = calculateBMI(weight, height);
+
+      bmi < 18.6
+        ? (resultBox.innerHTML = `<h4>Your BMI is ${bmi} underweight start eating</h4>`)
+        : bmi <= 24.9
+          ? (resultBox.innerHTML = `<h4>Your BMI is ${bmi} normal keep it up</h4>`)
+          : (resultBox.innerHTML = `<h4>Your BMI is ${bmi} overweight start exercise</h4>`);
+    });
+
+    function calculateBMI(weight, height) {
+      const heightInMeter = height / 100;
+      const bmi = weight / (heightInMeter * heightInMeter);
+      return bmi.toFixed(2);
+    }
+  </script>
+</html>
