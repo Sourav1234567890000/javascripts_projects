@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- clock section -->
+      <section class="clock">
+        <div class="start-section">
+          <button class="start-btn">start</button>
+        </div>
+        <div class="timer">timer</div>
+      </section>
+
+      <!-- label -->
+      <div class="time-opts">
+        <label for="time-opts">choose block</label>
+        <select name="chose-time" id="chose-block">
+          <option value="3">10 min</option>
+          <option value="5" disabled>45 min</option>
+        </select>
+      </div>
+
+      <!-- cycle section -->
+      <section class="cycle-section"></section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

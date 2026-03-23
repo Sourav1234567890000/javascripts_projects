@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  gap: 60px;
+}
+
+.clock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 28vh;
+}
+
+.start-btn {
+  height: 100px;
+  width: 300px;
+  border-radius: 20px;
+  border: darkblue;
+  background-color: cornflowerblue;
+  cursor: pointer;
+  font-size: 5rem;
+}
+
+.timer {
+  height: 100px;
+  width: 300px;
+  border-radius: 200px;
+  border: darkblue;
+  background-color: rgb(123, 132, 148);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.start-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.time-opts {
+  font-size: 3.4rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10vh;
+  padding-left: 20%;
+}
+
+.time-opts select {
+  width: 15rem;
+  font-size: 2rem;
+}
+
+.cycle-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid;
+  align-items: center;
+}
+
+.cycle-section p {
+  font-size: 1.2rem;
+}
